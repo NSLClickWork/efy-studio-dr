@@ -1,7 +1,5 @@
 # EFY Studio — Boutique Pilates Berlin
 
-![EFY Studio](/public/images/hero.png)
-
 A modern, premium web application built for **EFY Studio**, a boutique Pilates studio located in Lichterfelde West, Berlin. The site features a sophisticated design system, smooth animations, and a seamless bilingual (German/English) user experience.
 
 ## ✨ Features
