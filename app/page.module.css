@@ -60,20 +60,16 @@
 
 .heroKicker {
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.68rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--warm-white);
   margin: 0 auto var(--space-md);
-  display: table;
+  display: block;
   text-align: center;
   white-space: nowrap;
-  background: rgba(30, 24, 18, 0.3);
-  backdrop-filter: blur(4px);
-  padding: 0.5em 1.2em 0.5em calc(1.2em + 4px);
-  border-radius: 40px;
-  border: 1px solid rgba(253, 251, 247, 0.15);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .heroTitle {
