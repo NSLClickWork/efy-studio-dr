@@ -13,18 +13,37 @@
   padding-right: max(var(--space-md), env(safe-area-inset-right));
 }
 
-.navbar--transparent {
+.navbar::before,
+.navbar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: opacity var(--transition-medium);
+}
+
+.navbar::before {
   background: rgba(30, 24, 18, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0;
 }
 
-.navbar--solid {
+.navbar::after {
   background: rgba(253, 251, 247, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+}
+
+.navbar--transparent::before {
+  opacity: 1;
+}
+
+.navbar--solid::after {
+  opacity: 1;
 }
 
 .navbarInner {
