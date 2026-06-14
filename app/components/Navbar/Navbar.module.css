@@ -14,7 +14,10 @@
 }
 
 .navbar--transparent {
-  background-color: transparent;
+  background: rgba(30, 24, 18, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar--solid {
