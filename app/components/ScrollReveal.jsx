@@ -12,14 +12,15 @@ export default function ScrollReveal({
   className = '',
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: threshold, once: true });
+  const isInView = useInView(ref, { amount: threshold, once: false });
   const controls = useAnimation();
+  const prevInView = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    if (isInView) {
+    if (isInView && !prevInView.current) {
       // Determine entry direction by checking where the element sits in the viewport.
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
@@ -38,7 +39,21 @@ export default function ScrollReveal({
         opacity: 1, y: 0, x: 0, scale: 1,
         transition: { duration, delay, ease: [0.16, 1, 0.3, 1] },
       });
+    } else if (!isInView && prevInView.current) {
+      const rect = el.getBoundingClientRect();
+      const exitedAbove = rect.bottom < 0;
+
+      let to = {};
+      if (direction === 'up')    to = { y: exitedAbove ? -24 : 24 };
+      else if (direction === 'down')  to = { y: exitedAbove ? 24 : -24 };
+
+      controls.start({
+        opacity: 0, ...to,
+        transition: { duration: 0.38, ease: 'easeOut' },
+      });
     }
+
+    prevInView.current = isInView;
   }, [isInView, controls, direction, duration, delay]);
 
   return (
