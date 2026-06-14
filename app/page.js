@@ -411,24 +411,10 @@ export default function HomePage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                <div className={styles.locationHours}>
-                  <p>{studioInfo.openingHours.weekdays}</p>
-                  <p>{studioInfo.openingHours.saturday}</p>
-                  <p>{studioInfo.openingHours.sunday}</p>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
-              <div className={styles.locationMap}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.8!2d13.307!3d52.433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCurtiusstra%C3%9Fe+9%2C+12205+Berlin!5e0!3m2!1sde!2sde!4v1"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="EFY Studio Standort"
-                />
-              </div>
-            </ScrollReveal>
+                title="EFY Studio Standort"
+              />
+            </div>
+          </ScrollReveal>
           </div>
         </section>
       </div>
