@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EFY Studio — Boutique Pilates Berlin
 
-## Getting Started
+![EFY Studio](/public/images/hero.png)
 
-First, run the development server:
+A modern, premium web application built for **EFY Studio**, a boutique Pilates studio located in Lichterfelde West, Berlin. The site features a sophisticated design system, smooth animations, and a seamless bilingual (German/English) user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Premium Design Aesthetics**: Custom UI with elegant typography, muted color palettes, and glassmorphism elements.
+- **Bilingual Support**: Built-in Context-based language switcher (DE/EN) using `localStorage` for a seamless, hydration-safe experience.
+- **Dynamic Image Galleries**: Interactive carousels powered by Embla Carousel.
+- **Smooth Animations**: Scroll reveal effects using Framer Motion and intersection observers.
+- **Responsive Layouts**: Fully responsive grids adapting perfectly to desktop, tablet, and mobile viewing.
+- **SEO Optimized**: Fully integrated Schema.org structured data, metadata, and semantic HTML structure.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Styling:** Vanilla CSS / CSS Modules
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Carousel:** [Embla Carousel](https://www.embla-carousel.com/)
 
-## Learn More
+## 🚀 Getting Started Locally
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/NSLClickWork/efy-studio-dr.git
+   cd efy-studio-dr
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. **View the application:**
+   Open [http://localhost:3000](http://localhost:3000) (or whichever port Next.js assigns, e.g., 3001) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚂 Deployment (Railway)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is configured to be deployed effortlessly on **[Railway](https://railway.app/)**.
+
+### Steps to Deploy:
+1. Log in to your Railway dashboard.
+2. Click **New Project** -> **Deploy from GitHub repo**.
+3. Select this repository (`NSLClickWork/efy-studio-dr`).
+4. Railway will automatically detect the Next.js environment and configure the build settings.
+5. *(Optional)* Add any required Environment Variables in the Variables tab.
+6. Click **Deploy**. Railway will build the production bundle (`npm run build`) and start the server (`npm start`).
+
+Once deployed, Railway will generate a live URL where your Next.js application will be hosted securely with SSL.
+
+---
+
+*Designed and developed for EFY Studio Berlin.*
