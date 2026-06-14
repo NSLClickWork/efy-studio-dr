@@ -37,7 +37,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: transparent;
+  /* Smooth brown gradient at the top to protect the clock area and provide the requested effect */
+  background: linear-gradient(180deg, rgba(30, 24, 18, 0.7) 0%, rgba(30, 24, 18, 0) 25%);
 }
 
 .heroContent {
