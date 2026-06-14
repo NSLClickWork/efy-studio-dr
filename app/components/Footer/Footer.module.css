@@ -92,11 +92,14 @@
   font-size: 0.9rem;
   font-weight: 300;
   color: rgba(253, 251, 247, 0.7);
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
+  display: inline-block;
 }
 
 .footerLink:hover {
   color: var(--warm-white);
+  transform: translateX(6px);
+  text-shadow: 0 0 10px rgba(253, 251, 247, 0.4);
 }
 
 /* Bottom bar */
