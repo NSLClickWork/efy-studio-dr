@@ -4,7 +4,6 @@ import Footer from '@/app/components/Footer/Footer';
 import Providers from '@/app/components/Providers';
 
 export const viewport = {
-  themeColor: '#fdfbf7',
   viewportFit: 'cover',
   width: 'device-width',
   initialScale: 1,
