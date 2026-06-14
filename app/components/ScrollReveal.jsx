@@ -46,12 +46,15 @@ export default function ScrollReveal({
     } else if (!isInView && prevInView.current) {
       const isDesktop = window.innerWidth > 768;
       const blurFilter = isDesktop ? 'blur(3px)' : 'blur(0px)';
+      const xDistance = isDesktop ? 60 : 30;
       const rect = el.getBoundingClientRect();
       const exitedAbove = rect.bottom < 0;
 
       let to = {};
       if (direction === 'up')    to = { y: exitedAbove ? -24 : 24 };
       else if (direction === 'down')  to = { y: exitedAbove ? 24 : -24 };
+      else if (direction === 'left')  to = { x: exitedAbove ? -xDistance : xDistance };
+      else if (direction === 'right') to = { x: exitedAbove ? xDistance : -xDistance };
 
       controls.start({
         opacity: 0, filter: blurFilter, ...to,

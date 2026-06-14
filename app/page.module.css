@@ -37,8 +37,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  /* Soft dark gradient only at the top for navbar visibility */
-  background: linear-gradient(180deg, rgba(20, 15, 10, 0.4) 0%, rgba(20, 15, 10, 0) 15%);
+  /* Strong brown gradient at top for status bar, fading out */
+  background: linear-gradient(180deg, var(--dark) 0%, rgba(30, 24, 18, 0.8) 10%, rgba(30, 24, 18, 0) 30%);
 }
 
 .heroContent {
