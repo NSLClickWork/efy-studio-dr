@@ -1,0 +1,161 @@
+.hero {
+  position: relative;
+  height: 50vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 35, 24, 0.4);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: var(--warm-white);
+}
+
+.heroContent h1 {
+  color: var(--warm-white);
+  font-style: italic;
+  margin-top: var(--space-xs);
+}
+
+.intro {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--warm-white);
+  text-align: center;
+}
+
+.introInner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.introTitle {
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.menuSection {
+  padding: 0 var(--space-md) var(--space-xl);
+  background-color: var(--warm-white);
+}
+
+.menuInner {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--cream);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+}
+
+.menuHeader {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.menuHeader h2 {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.menuGrid {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.menuItem {
+  border-bottom: 1px solid var(--sand);
+  padding-bottom: var(--space-sm);
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.menuItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2rem;
+}
+
+.menuItemName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.menuItemPrice {
+  font-family: var(--font-display);
+  color: var(--brown);
+  font-size: 1.1rem;
+}
+
+.menuItemDesc {
+  font-size: 0.85rem;
+  color: var(--taupe);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+    height: 45vh;
+  }
+
+  .intro {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .introText {
+    font-size: 1rem;
+  }
+
+  .menuSection {
+    padding: 0 var(--space-sm) var(--space-lg);
+  }
+
+  .menuInner {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .menuItemName {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuInner {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
