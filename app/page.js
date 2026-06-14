@@ -72,11 +72,11 @@ export default function HomePage() {
             alt="Reformer Pilates im EFY Studio Berlin"
             fill
             priority
-            quality={90}
+            quality={100}
             sizes="100vw"
             style={{ objectFit: 'cover' }}
-            className={styles.heroVideo}
           />
+          <div className={styles.heroBrandBlur} />
         </div>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
