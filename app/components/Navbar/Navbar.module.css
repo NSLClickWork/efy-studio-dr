@@ -42,29 +42,8 @@
   transition: opacity var(--transition-medium);
 }
 
-/* Ivory-white gradient — appears when scrolled past hero */
-.navbar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(253, 251, 247, 0.97) 55%,
-    rgba(253, 251, 247, 0) 100%
-  );
-  pointer-events: none;
-  z-index: 0;
-  transition: opacity var(--transition-medium);
-}
-
 .navbar--transparent::before { opacity: 1; }
-.navbar--transparent::after  { opacity: 0; }
-
-.navbar--solid::before { opacity: 0; }
-.navbar--solid::after  { opacity: 1; }
+.navbar--solid::before       { opacity: 0; }
 
 .navbarInner {
   position: relative;
@@ -88,6 +67,7 @@
 .logoSvg {
   height: 44px;
   width: auto;
+  border-radius: 8px;
   transition: filter var(--transition-medium);
 }
 
