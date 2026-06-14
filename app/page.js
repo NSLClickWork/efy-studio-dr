@@ -65,7 +65,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══════════ SECTION 1: HERO ═══════════ */}
-      <section className={styles.hero} id="hero">
+      <section className={styles.hero} id="hero" data-navbar-theme="dark">
         <div className={styles.heroBg}>
           <video
             src="/videos/h264-2-web.mp4"
@@ -106,7 +106,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 2: INTRO STRIP ═══════════ */}
-      <div className={styles.introStrip} aria-hidden="true">
+      <div className={styles.introStrip} aria-hidden="true" data-navbar-theme="dark">
         <div className={styles.introStripTrack}>
           {marqueeItems.map((item, i) => (
             <span key={i} style={{ display: 'inline-flex', alignItems: 'center' }}>
@@ -119,7 +119,7 @@ export default function HomePage() {
 
       <div style={{ backgroundColor: 'var(--warm-white)', position: 'relative', zIndex: 1, overflowX: 'hidden' }}>
         {/* ═══════════ SECTION 3: PHILOSOPHY ═══════════ */}
-      <section className={styles.philosophy} id="philosophy">
+      <section className={styles.philosophy} id="philosophy" data-navbar-theme="light">
         <div className={styles.philosophyInner}>
           <ScrollReveal direction="left">
             <div className={styles.philosophyContent}>
@@ -145,7 +145,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 4: SERVICE CARDS ═══════════ */}
-      <section className={styles.services} id="services">
+      <section className={styles.services} id="services" data-navbar-theme="light">
         <div className={styles.servicesInner}>
           <ScrollReveal>
             <div className={styles.servicesHeader}>
@@ -179,7 +179,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 5: EDITORIAL REFORMER ═══════════ */}
-      <section className={styles.editorial} id="editorial-reformer">
+      <section className={styles.editorial} id="editorial-reformer" data-navbar-theme="dark">
         <ScrollReveal direction="left" className={styles.editorialImage}>
           <Image
             src="/images/reformer.png"
@@ -209,7 +209,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 6: BARRE ═══════════ */}
-      <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre">
+      <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="light">
         <ScrollReveal direction="right" threshold={0.2} className={styles.editorialImage}>
           <video
             src="/videos/h264-1.mp4"
@@ -233,7 +233,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 7: CLASS TYPES ═══════════ */}
-      <section className={styles.classTypes} id="class-types">
+      <section className={styles.classTypes} id="class-types" data-navbar-theme="light">
         <div className={styles.classTypesInner}>
           <ScrollReveal>
             <div className={styles.classTypesHeader}>
@@ -256,7 +256,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 8: PRENATAL ═══════════ */}
-      <section className={styles.prenatal} id="prenatal">
+      <section className={styles.prenatal} id="prenatal" data-navbar-theme="light">
         <ScrollReveal direction="left">
           <div className={styles.prenatalContent}>
             <span className="kicker">{tr.prenatal.kicker}</span>
@@ -280,7 +280,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 9: MOVE & GROW ═══════════ */}
-      <section className={styles.moveGrow} id="move-grow">
+      <section className={styles.moveGrow} id="move-grow" data-navbar-theme="dark">
         <div className={styles.moveGrowWatermark}>M&G</div>
         <div className={styles.moveGrowContent}>
           <ScrollReveal>
@@ -296,7 +296,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 10: COFFEE ═══════════ */}
-      <section className={styles.coffee} id="studio-cafe">
+      <section className={styles.coffee} id="studio-cafe" data-navbar-theme="light">
         <ScrollReveal direction="left" className={styles.coffeeImage}>
           <Image
             src="/images/cafe-moodboard.jpg"
@@ -326,7 +326,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 11: GALLERY ═══════════ */}
-      <section className={styles.gallery} id="gallery">
+      <section className={styles.gallery} id="gallery" data-navbar-theme="light">
         <div className={styles.galleryInner}>
           <ScrollReveal>
             <div className={styles.galleryHeader}>
@@ -351,7 +351,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 12: TESTIMONIAL ═══════════ */}
-      <section className={styles.testimonial} id="testimonials">
+      <section className={styles.testimonial} id="testimonials" data-navbar-theme="dark">
         <div className={styles.testimonialInner}>
           <ScrollReveal direction="fade">
             <div
@@ -384,7 +384,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 13: LOCATION ═══════════ */}
-      <section className={styles.location} id="location">
+      <section className={styles.location} id="location" data-navbar-theme="light">
         <div className={styles.locationInner}>
           <ScrollReveal direction="left">
             <div className={styles.locationContent}>
@@ -420,7 +420,7 @@ export default function HomePage() {
       </div>
 
       {/* ═══════════ SECTION 14: FINAL CTA ═══════════ */}
-      <section className={styles.ctaBanner} id="final-cta">
+      <section className={styles.ctaBanner} id="final-cta" data-navbar-theme="dark">
         <div className={styles.ctaBannerInner}>
           <ScrollReveal>
             <h2>{tr.finalCta.title}</h2>

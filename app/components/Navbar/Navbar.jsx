@@ -9,17 +9,25 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import { t } from '@/app/data/translations';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [navTheme, setNavTheme] = useState('dark');
   const [menuOpen, setMenuOpen] = useState(false);
   const { lang, toggleLang } = useLanguage();
   const tr = t[lang].nav;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > window.innerHeight - 80);
+    const detectTheme = () => {
+      const sections = document.querySelectorAll('[data-navbar-theme]');
+      for (const el of sections) {
+        const { top, bottom } = el.getBoundingClientRect();
+        if (top <= 10 && bottom > 10) {
+          setNavTheme(el.dataset.navbarTheme);
+          return;
+        }
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    detectTheme();
+    window.addEventListener('scroll', detectTheme, { passive: true });
+    return () => window.removeEventListener('scroll', detectTheme);
   }, []);
 
   useEffect(() => {
@@ -31,7 +39,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  const navClass = `${styles.navbar} ${scrolled || menuOpen ? styles['navbar--solid'] : styles['navbar--transparent']}`;
+  const navClass = `${styles.navbar} ${navTheme === 'light' || menuOpen ? styles['navbar--solid'] : styles['navbar--transparent']}`;
 
   return (
     <>
