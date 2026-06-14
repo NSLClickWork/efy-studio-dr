@@ -55,8 +55,8 @@ export default function HomePage() {
   const marqueeItems = [...stripItems, ...stripItems, ...stripItems];
 
   const galleryImages = [
+    { type: 'video', src: '/videos/h264-3.mp4' },
     { src: '/images/ball.png', alt: 'Pilates Ball Workout', pos: '80% center' },
-    { src: '/images/mat.png', alt: 'Mat Pilates bei EFY Studio' },
     { src: '/images/prenatal.png', alt: 'Pre & Postnatal Pilates' },
     { src: '/images/barre.png', alt: 'Barre Training' },
     { src: '/images/reformer.png', alt: 'Reformer Pilates Übung' },
@@ -336,15 +336,26 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
           <div className={styles.galleryGrid}>
-            {galleryImages.map((img, i) => (
+            {galleryImages.map((item, i) => (
               <div key={i} className={styles.galleryItem}>
+                {item.type === 'video' ? (
+                  <video
+                    src={item.src}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                ) : (
                 <Image
-                  src={img.src}
-                  alt={img.alt}
+                  src={item.src}
+                  alt={item.alt}
                   fill
                   sizes={i === 0 ? '50vw' : '25vw'}
-                  style={{ objectFit: 'cover', objectPosition: img.pos || 'center' }}
+                  style={{ objectFit: 'cover', objectPosition: item.pos || 'center' }}
                 />
+                )}
               </div>
             ))}
           </div>
