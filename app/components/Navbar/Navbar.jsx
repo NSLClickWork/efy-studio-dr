@@ -15,19 +15,30 @@ export default function Navbar() {
   const tr = t[lang].nav;
 
   useEffect(() => {
+    const sections = Array.from(document.querySelectorAll('[data-navbar-theme]'));
+    let raf;
+
     const detectTheme = () => {
-      const sections = document.querySelectorAll('[data-navbar-theme]');
       for (const el of sections) {
         const { top, bottom } = el.getBoundingClientRect();
         if (top <= 10 && bottom > 10) {
-          setNavTheme(el.dataset.navbarTheme);
+          setNavTheme(prev => prev === el.dataset.navbarTheme ? prev : el.dataset.navbarTheme);
           return;
         }
       }
     };
+
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(detectTheme);
+    };
+
     detectTheme();
-    window.addEventListener('scroll', detectTheme, { passive: true });
-    return () => window.removeEventListener('scroll', detectTheme);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
   useEffect(() => {

@@ -39,7 +39,7 @@
   );
   pointer-events: none;
   z-index: 0;
-  transition: opacity var(--transition-medium);
+  transition: opacity 0.2s ease;
 }
 
 .navbar--transparent::before { opacity: 1; }
@@ -84,7 +84,7 @@
   font-weight: 300;
   font-size: 1.3rem;
   letter-spacing: 1px;
-  transition: color var(--transition-medium);
+  transition: color 0.2s ease;
 }
 
 .navbar--transparent .logoText {
@@ -195,7 +195,7 @@
 .hamburgerLine {
   width: 24px;
   height: 1.5px;
-  transition: all var(--transition-medium);
+  transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
 .navbar--transparent .hamburgerLine {
