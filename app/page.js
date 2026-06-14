@@ -117,7 +117,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div style={{ backgroundColor: 'var(--warm-white)', position: 'relative', zIndex: 1 }}>
+      <div style={{ backgroundColor: 'var(--warm-white)', position: 'relative', zIndex: 1, overflowX: 'hidden' }}>
         {/* ═══════════ SECTION 3: PHILOSOPHY ═══════════ */}
       <section className={styles.philosophy} id="philosophy">
         <div className={styles.philosophyInner}>
