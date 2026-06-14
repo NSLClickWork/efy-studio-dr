@@ -19,7 +19,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: max(44px, env(safe-area-inset-top)); /* fallback height for non-iOS or debugging */
+  height: env(safe-area-inset-top);
   z-index: -1;
   background: linear-gradient(to bottom, rgba(30, 24, 18, 0.85) 0%, rgba(30, 24, 18, 0) 100%);
   transition: opacity var(--transition-medium);
