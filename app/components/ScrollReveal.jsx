@@ -29,16 +29,16 @@ export default function ScrollReveal({
       const fromBelow = rect.top > vh * 0.35;
 
       let from = {};
-      if (direction === 'up')    from = { y: fromBelow ? 36 : -36, filter: 'blur(2px)' };
-      else if (direction === 'down')  from = { y: fromBelow ? -36 : 36, filter: 'blur(2px)' };
-      else if (direction === 'left')  from = { x: -50, filter: 'blur(2px)' };
-      else if (direction === 'right') from = { x: 50,  filter: 'blur(2px)' };
-      else if (direction === 'fade')  from = { filter: 'blur(3px)' };
+      if (direction === 'up')    from = { y: fromBelow ? 36 : -36 };
+      else if (direction === 'down')  from = { y: fromBelow ? -36 : 36 };
+      else if (direction === 'left')  from = { x: -50 };
+      else if (direction === 'right') from = { x: 50 };
+      else if (direction === 'fade')  from = { };
       else if (direction === 'scale') from = { scale: 0.96 };
 
       controls.set({ opacity: 0, ...from });
       controls.start({
-        opacity: 1, y: 0, x: 0, scale: 1, filter: 'blur(0px)',
+        opacity: 1, y: 0, x: 0, scale: 1,
         transition: { duration, delay, ease: [0.16, 1, 0.3, 1] },
       });
 
@@ -53,7 +53,7 @@ export default function ScrollReveal({
       else if (direction === 'down')  to = { y: exitedAbove ? 24 : -24 };
 
       controls.start({
-        opacity: 0, filter: 'blur(2px)', ...to,
+        opacity: 0, ...to,
         transition: { duration: 0.38, ease: 'easeOut' },
       });
     }
