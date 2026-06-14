@@ -60,16 +60,20 @@
 
 .heroKicker {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.68rem;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--sand);
+  color: var(--warm-white);
   margin: 0 auto var(--space-md);
-  display: block;
+  display: table;
   text-align: center;
   white-space: nowrap;
-  max-width: none;
+  background: rgba(30, 24, 18, 0.3);
+  backdrop-filter: blur(4px);
+  padding: 0.5em 1.2em 0.5em calc(1.2em + 4px);
+  border-radius: 40px;
+  border: 1px solid rgba(253, 251, 247, 0.15);
 }
 
 .heroTitle {
@@ -254,7 +258,9 @@
   transition: background-color var(--transition-medium);
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .serviceCard:hover {
@@ -282,6 +288,9 @@
 .serviceCardContent {
   padding: 1.75rem var(--space-md);
   border-top: 1px solid var(--cream);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .serviceCardContent h3 {
@@ -296,6 +305,10 @@
   margin-bottom: var(--space-sm);
   line-height: 1.7;
   max-width: 100%;
+}
+
+.serviceCardContent .link-arrow {
+  margin-top: auto;
 }
 
 /* === EDITORIAL SECTIONS === */

@@ -55,7 +55,7 @@ export default function HomePage() {
   const marqueeItems = [...stripItems, ...stripItems, ...stripItems];
 
   const galleryImages = [
-    { src: '/images/ball.png', alt: 'Pilates Ball Workout' },
+    { src: '/images/ball.png', alt: 'Pilates Ball Workout', pos: '80% center' },
     { src: '/images/mat.png', alt: 'Mat Pilates bei EFY Studio' },
     { src: '/images/prenatal.png', alt: 'Pre & Postnatal Pilates' },
     { src: '/images/barre.png', alt: 'Barre Training' },
@@ -341,7 +341,7 @@ export default function HomePage() {
                   alt={img.alt}
                   fill
                   sizes={i === 0 ? '50vw' : '25vw'}
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'cover', objectPosition: img.pos || 'center' }}
                 />
               </div>
             ))}
