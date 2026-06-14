@@ -251,16 +251,20 @@
 .serviceCard {
   background-color: var(--warm-white);
   overflow: hidden;
-  transition: background-color var(--transition-medium);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid transparent;
 }
 
 .serviceCard:hover {
-  background-color: var(--cream);
+  background-color: #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(30, 24, 18, 0.06);
+  border-color: rgba(30, 24, 18, 0.05);
 }
 
 .serviceCardImage {
