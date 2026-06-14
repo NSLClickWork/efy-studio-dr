@@ -67,13 +67,14 @@ export default function HomePage() {
       {/* ═══════════ SECTION 1: HERO ═══════════ */}
       <section className={styles.hero} id="hero" data-navbar-theme="dark">
         <div className={styles.heroBg}>
-          <video
-            src="/videos/h264-2-web.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
+          <Image
+            src="/images/reformer.png"
+            alt="Reformer Pilates im EFY Studio Berlin"
+            fill
+            priority
+            quality={90}
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
             className={styles.heroVideo}
           />
         </div>
@@ -181,13 +182,13 @@ export default function HomePage() {
       {/* ═══════════ SECTION 5: EDITORIAL REFORMER ═══════════ */}
       <section className={styles.editorial} id="editorial-reformer" data-navbar-theme="dark">
         <ScrollReveal direction="left" className={styles.editorialImage}>
-          <Image
-            src="/images/reformer.png"
-            alt="Reformer Pilates im EFY Studio Berlin"
-            fill
-            quality={100}
-            sizes="50vw"
-            style={{ objectFit: 'cover' }}
+          <video
+            src="/videos/h264-2-web.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </ScrollReveal>
         <div className={`${styles.editorialContent} ${styles['editorialContent--dark']}`}>
