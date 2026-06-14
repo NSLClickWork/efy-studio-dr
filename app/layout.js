@@ -4,6 +4,7 @@ import Footer from '@/app/components/Footer/Footer';
 import Providers from '@/app/components/Providers';
 
 export const viewport = {
+  themeColor: '#1e1812',
   viewportFit: 'cover',
   width: 'device-width',
   initialScale: 1,
@@ -19,6 +20,11 @@ export const metadata = {
   description: 'Premium Pilates Studio in Berlin Lichterfelde West. Reformer, Barre, Mat Pilates in kleinen Gruppen. Persönliche Betreuung. Jetzt Probestunde buchen.',
   keywords: ['Pilates Berlin', 'Reformer Pilates', 'Boutique Pilates', 'Lichterfelde West', 'Barre Pilates', 'Mat Pilates', 'Prenatal Pilates', 'Pilates Studio Berlin'],
   authors: [{ name: 'EFY Studio' }],
+  appleWebApp: {
+    capable: true,
+    title: 'EFY Studio',
+    statusBarStyle: 'black-translucent',
+  },
   openGraph: {
     title: 'EFY Studio — Boutique Pilates in Lichterfelde West, Berlin',
     description: 'Premium Pilates Studio in Berlin Lichterfelde West. Reformer, Barre, Mat Pilates in kleinen Gruppen.',
