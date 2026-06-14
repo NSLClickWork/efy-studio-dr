@@ -352,7 +352,10 @@ p {
 }
 
 /* --- Scroll Reveal --- */
-.reveal { opacity: 0; }
+.reveal {
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
 .reveal-up    { transform: translateY(36px); }
 .reveal-down  { transform: translateY(-36px); }
 .reveal-left  { transform: translateX(-60px); }

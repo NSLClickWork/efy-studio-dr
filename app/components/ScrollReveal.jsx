@@ -18,9 +18,11 @@ export default function ScrollReveal({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (delay) el.style.transitionDelay = `${delay}s`;
+          el.style.transitionDelay = delay ? `${delay}s` : '';
           el.classList.add('reveal-visible');
-          observer.disconnect();
+        } else {
+          el.style.transitionDelay = '';
+          el.classList.remove('reveal-visible');
         }
       },
       { threshold }
