@@ -26,20 +26,26 @@ export default function ScrollReveal({
       const vh = window.innerHeight;
       const fromBelow = rect.top > vh * 0.35;
 
+      const isDesktop = window.innerWidth > 768;
+      const blurFilter = isDesktop ? 'blur(3px)' : 'blur(0px)';
+      const xDistance = isDesktop ? 60 : 30;
+
       let from = {};
-      if (direction === 'up')    from = { y: fromBelow ? 36 : -36 };
-      else if (direction === 'down')  from = { y: fromBelow ? -36 : 36 };
-      else if (direction === 'left')  from = { x: -30 };
-      else if (direction === 'right') from = { x: 30 };
-      else if (direction === 'fade')  from = { };
-      else if (direction === 'scale') from = { scale: 0.96 };
+      if (direction === 'up')    from = { y: fromBelow ? 36 : -36, filter: blurFilter };
+      else if (direction === 'down')  from = { y: fromBelow ? -36 : 36, filter: blurFilter };
+      else if (direction === 'left')  from = { x: -xDistance, filter: blurFilter };
+      else if (direction === 'right') from = { x: xDistance, filter: blurFilter };
+      else if (direction === 'fade')  from = { filter: blurFilter };
+      else if (direction === 'scale') from = { scale: 0.96, filter: blurFilter };
 
       controls.set({ opacity: 0, ...from });
       controls.start({
-        opacity: 1, y: 0, x: 0, scale: 1,
+        opacity: 1, y: 0, x: 0, scale: 1, filter: 'blur(0px)',
         transition: { duration, delay, ease: [0.16, 1, 0.3, 1] },
       });
     } else if (!isInView && prevInView.current) {
+      const isDesktop = window.innerWidth > 768;
+      const blurFilter = isDesktop ? 'blur(3px)' : 'blur(0px)';
       const rect = el.getBoundingClientRect();
       const exitedAbove = rect.bottom < 0;
 
@@ -48,7 +54,7 @@ export default function ScrollReveal({
       else if (direction === 'down')  to = { y: exitedAbove ? 24 : -24 };
 
       controls.start({
-        opacity: 0, ...to,
+        opacity: 0, filter: blurFilter, ...to,
         transition: { duration: 0.38, ease: 'easeOut' },
       });
     }
