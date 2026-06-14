@@ -39,7 +39,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <head>
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
