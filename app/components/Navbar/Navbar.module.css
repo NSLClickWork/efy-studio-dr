@@ -18,10 +18,10 @@
 }
 
 .navbar--solid {
-  background: linear-gradient(180deg, rgba(30, 24, 18, 0.8) 0%, rgba(30, 24, 18, 0.4) 100%);
+  background: rgba(253, 251, 247, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .navbarInner {
@@ -68,7 +68,7 @@
 }
 
 .navbar--solid .logoText {
-  color: var(--warm-white);
+  color: var(--dark);
 }
 
 /* Navigation Links */
@@ -115,15 +115,15 @@
 }
 
 .navbar--solid .navLink {
-  color: var(--warm-white);
+  color: var(--dark);
 }
 
 .navbar--solid .navLink::after {
-  background-color: var(--warm-white);
+  background-color: var(--dark);
 }
 
 .navbar--solid .navLink:hover {
-  opacity: 0.8;
+  color: var(--brown);
 }
 
 /* CTA Button */
@@ -148,14 +148,14 @@
 }
 
 .navbar--solid .navCta {
-  background-color: var(--sand);
-  color: var(--dark);
-  border: 1.5px solid var(--sand);
+  background-color: var(--brown);
+  color: var(--warm-white);
+  border: 1.5px solid var(--brown);
 }
 
 .navbar--solid .navCta:hover {
-  background-color: transparent;
-  color: var(--sand);
+  background-color: var(--dark);
+  border-color: var(--dark);
 }
 
 /* Mobile Hamburger */
