@@ -68,13 +68,12 @@ export default function HomePage() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroBg}>
           <video
-            src="/videos/h264-2.mp4"
+            src="/videos/h264-2-web.mp4"
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
-            poster="/images/hero.png"
             className={styles.heroVideo}
           />
         </div>
