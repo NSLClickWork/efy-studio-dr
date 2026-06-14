@@ -73,6 +73,8 @@ export default function HomePage() {
             loop
             muted
             playsInline
+            preload="auto"
+            poster="/images/hero.png"
             className={styles.heroVideo}
           />
         </div>
