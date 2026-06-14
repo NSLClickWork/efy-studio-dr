@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--dark);
   color: var(--text-light);
-  padding: var(--space-xl) var(--space-md) var(--space-md);
+  padding: var(--space-xl) max(var(--space-md), env(safe-area-inset-right)) calc(var(--space-md) + env(safe-area-inset-bottom)) max(var(--space-md), env(safe-area-inset-left));
 }
 
 .footerInner {

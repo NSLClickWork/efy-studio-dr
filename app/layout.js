@@ -3,6 +3,14 @@ import Navbar from '@/app/components/Navbar/Navbar';
 import Footer from '@/app/components/Footer/Footer';
 import Providers from '@/app/components/Providers';
 
+export const viewport = {
+  themeColor: '#fdfbf7',
+  viewportFit: 'cover',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata = {
   metadataBase: new URL('https://efystudio.berlin'),
   title: {
