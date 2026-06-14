@@ -5,7 +5,6 @@ export default function manifest() {
     description: 'Premium Pilates Studio in Berlin Lichterfelde West.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#1e1812',
     icons: [
       {
         src: '/icon.svg',
