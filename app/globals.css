@@ -66,7 +66,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--dark);
+  /* Use a gradient to prevent Safari from tinting the top status bar, while keeping the bottom safe area dark */
+  background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--dark) 100%);
 }
 
 body {
