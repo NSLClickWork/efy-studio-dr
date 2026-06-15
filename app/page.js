@@ -59,7 +59,7 @@ export default function HomePage() {
     { src: '/images/ball.png', alt: 'Pilates Ball Workout', pos: '80% center' },
     { src: '/images/prenatal.png', alt: 'Pre & Postnatal Pilates' },
     { src: '/images/barre.png', alt: 'Barre Training' },
-    { src: '/images/reformer.png', alt: 'Reformer Pilates Übung' },
+    { src: '/images/mat.png', alt: 'Pilates Mat Übung' },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function HomePage() {
             priority
             quality={90}
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center 18%' }}
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className={styles.heroOverlay} />
