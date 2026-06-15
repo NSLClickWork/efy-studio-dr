@@ -97,7 +97,17 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className={styles.heroScroll}>
+        <div 
+          className={styles.heroScroll} 
+          onClick={() => {
+            document.getElementById('philosophy')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') document.getElementById('philosophy')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           <span>{tr.hero.scroll}</span>
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M6 0v16M1 12l5 5 5-5" />

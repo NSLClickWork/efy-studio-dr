@@ -121,6 +121,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   animation: heroScrollPulse 3s ease-in-out infinite;
+  cursor: pointer;
 }
 
 @keyframes heroScrollPulse {
@@ -1069,23 +1070,17 @@
   }
 
   .classTypesGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .classTypeCard {
     padding: var(--space-md) var(--space-xs);
+    border-right: none !important;
+    border-bottom: 1px solid rgba(200, 185, 154, 0.35);
   }
 
-  .classTypeCard:nth-child(2) {
-    border-right: none;
-  }
-
-  .classTypeCard:nth-child(3) {
-    border-right: 1px solid rgba(200, 185, 154, 0.35);
-  }
-
-  .classTypeCard:nth-child(4) {
-    border-right: none;
+  .classTypeCard:last-child {
+    border-bottom: none;
   }
 
   .prenatalContent {
@@ -1122,6 +1117,10 @@
 
   .testimonial {
     padding: var(--space-xl) var(--space-sm);
+  }
+
+  .gallery {
+    padding: var(--space-xl) 0;
   }
 
   .location {
