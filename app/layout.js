@@ -31,7 +31,7 @@ export const metadata = {
     siteName: 'EFY Studio',
     locale: 'de_DE',
     type: 'website',
-    images: [{ url: '/images/hero.png', width: 1200, height: 630, alt: 'EFY Studio Berlin' }],
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: 'EFY Studio Berlin' }],
   },
   twitter: {
     card: 'summary_large_image',
