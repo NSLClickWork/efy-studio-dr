@@ -72,7 +72,7 @@ export default function HomePage() {
             alt="Reformer Pilates im EFY Studio Berlin"
             fill
             priority
-            unoptimized
+            quality={90}
             sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 18%' }}
           />
