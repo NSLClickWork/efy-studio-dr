@@ -1,7 +1,7 @@
 export const classes = [
   {
     slug: 'reformer',
-    image: '/images/reformer.png',
+    image: '/images/reformer.webp',
     video: '/videos/h264-1.mp4',
     duration: '55 Min.',
     de: {
@@ -37,7 +37,7 @@ export const classes = [
   },
   {
     slug: 'barre',
-    image: '/images/ball.png',
+    image: '/images/barre.webp',
     video: '/videos/h264-2.mp4',
     duration: '50 Min.',
     de: {
@@ -73,7 +73,7 @@ export const classes = [
   },
   {
     slug: 'mat',
-    image: '/images/mat.png',
+    image: '/images/mat.webp',
     duration: '50 Min.',
     de: {
       title: 'Mat Pilates',
@@ -108,7 +108,7 @@ export const classes = [
   },
   {
     slug: 'prenatal',
-    image: '/images/prenatal.png',
+    image: '/images/prenatal.webp',
     video: '/videos/h264-3.mp4',
     duration: '45 Min.',
     de: {
