@@ -146,7 +146,7 @@
 
 @media (max-width: 600px) {
   .footer {
-    padding: var(--space-lg) var(--space-sm) var(--space-md);
+    padding: var(--space-lg) var(--space-sm) calc(var(--space-md) + env(safe-area-inset-bottom));
   }
 
   .footerInner {
