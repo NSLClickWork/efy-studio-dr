@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
@@ -12,6 +13,7 @@ export default function Navbar() {
   const [navTheme, setNavTheme] = useState('dark');
   const [menuOpen, setMenuOpen] = useState(false);
   const { lang, toggleLang } = useLanguage();
+  const pathname = usePathname();
   const tr = t[lang].nav;
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export default function Navbar() {
       window.removeEventListener('scroll', onScroll);
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     if (menuOpen) {
