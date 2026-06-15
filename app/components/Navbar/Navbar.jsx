@@ -82,7 +82,17 @@ export default function Navbar() {
 
           <div className={styles.navLinks}>
             {navigation.map((item) => (
-              <Link key={item.href} href={item.href} className={styles.navLink}>
+              <Link 
+                key={item.href} 
+                href={item.href} 
+                className={styles.navLink}
+                onClick={(e) => {
+                  if (pathname === item.href) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+              >
                 {tr[item.key]}
               </Link>
             ))}
@@ -133,7 +143,13 @@ export default function Navbar() {
             key={item.href}
             href={item.href}
             className={styles.mobileLink}
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => {
+              if (pathname === item.href) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+              setMenuOpen(false);
+            }}
           >
             {tr[item.key]}
           </Link>
