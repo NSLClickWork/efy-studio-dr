@@ -37,7 +37,7 @@ export const classes = [
   },
   {
     slug: 'barre',
-    image: '/images/barre.webp',
+    image: '/images/philosophy.png',
     video: '/videos/h264-2.mp4',
     duration: '50 Min.',
     de: {

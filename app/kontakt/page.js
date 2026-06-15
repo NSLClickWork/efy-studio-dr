@@ -33,7 +33,7 @@ export default function KontaktPage() {
         <div className={styles.heroContent}>
           <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.kicker}</span>
           <h1>{tr.title}</h1>
-          <p style={{ color: 'rgba(253, 251, 247, 0.6)' }}>{tr.sub}</p>
+          <p>{tr.sub}</p>
         </div>
       </section>
 
