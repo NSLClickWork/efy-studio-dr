@@ -11,6 +11,48 @@
   transition: all var(--transition-medium);
   padding-left: max(var(--space-md), env(safe-area-inset-left));
   padding-right: max(var(--space-md), env(safe-area-inset-right));
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.navbarLogoLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  min-height: calc(var(--nav-height) + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-medium);
+  padding-left: max(var(--space-md), env(safe-area-inset-left));
+  padding-right: max(var(--space-md), env(safe-area-inset-right));
+  pointer-events: none;
+}
+
+.logoIconLink {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.logoTextWrapper {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.logoIconPlaceholder {
+  width: 56px; /* 44px logo + 12px gap */
+  flex-shrink: 0;
+}
+
+.logoTextLink {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
 }
 
 .navbar--transparent {
@@ -21,48 +63,7 @@
   background: transparent;
 }
 
-/* Brown gradient — covers status bar when hero video is visible */
-.navbar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 160px;
-  background: linear-gradient(
-    to bottom,
-    rgba(107, 87, 68, 0.42) 0%,
-    rgba(107, 87, 68, 0.28) 18%,
-    rgba(107, 87, 68, 0) 100%
-  );
-  z-index: -1;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}
 
-/* Beige gradient — blends into the page when scrolling */
-.navbar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 140px;
-  background: linear-gradient(
-    to bottom,
-    rgba(245, 240, 232, 1) 45%,
-    rgba(245, 240, 232, 0) 100%
-  );
-  z-index: -1;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}
-
-.navbar--transparent::before { opacity: 1; }
-.navbar--transparent::after  { opacity: 0; }
-
-.navbar--solid::before       { opacity: 0; }
-.navbar--solid::after        { opacity: 1; }
 
 .navbarInner {
   position: relative;
@@ -90,15 +91,12 @@
   transition: filter var(--transition-medium);
 }
 
-.navbar--transparent .logoSvg {
-  /* Original logic inverted it, but E.svg has a colored background */
-}
 
-.navbar--solid .logoSvg {
-  /* No filter needed */
-}
+
+
 
 .logoText {
+  color: var(--cream);
   font-family: var(--font-display);
   font-weight: 300;
   font-size: 1.3rem;
@@ -106,22 +104,20 @@
   transition: color 0.2s ease;
 }
 
-.navbar--transparent .logoText {
-  color: var(--warm-white);
-}
 
-.navbar--solid .logoText {
-  color: var(--dark);
-}
+
+
 
 /* Navigation Links */
 .navLinks {
   display: flex;
   align-items: center;
   gap: 2rem;
+  pointer-events: auto;
 }
 
 .navLink {
+  color: var(--cream);
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 0.8rem;
@@ -132,6 +128,7 @@
 }
 
 .navLink::after {
+  background-color: var(--cream);
   content: '';
   position: absolute;
   bottom: -4px;
@@ -145,31 +142,23 @@
   width: 100%;
 }
 
-.navbar--transparent .navLink {
-  color: var(--warm-white);
-}
 
-.navbar--transparent .navLink::after {
-  background-color: var(--warm-white);
-}
 
-.navbar--transparent .navLink:hover {
-  opacity: 0.8;
-}
 
-.navbar--solid .navLink {
-  color: var(--dark);
-}
 
-.navbar--solid .navLink::after {
-  background-color: var(--dark);
-}
 
-.navbar--solid .navLink:hover {
-  color: var(--brown);
-}
+
+
+
+
+
+
 
 /* CTA Button */
+.navCta:hover {
+  background-color: var(--cream);
+  color: var(--dark);
+}
 .navCta {
   composes: btn from global;
   font-size: 0.75rem;
@@ -177,29 +166,18 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all var(--transition-medium);
-}
-
-.navbar--transparent .navCta {
   background-color: transparent;
-  color: var(--warm-white);
-  border: 1.5px solid var(--warm-white);
+  color: var(--cream);
+  border: 1.5px solid var(--cream);
 }
 
-.navbar--transparent .navCta:hover {
-  background-color: var(--warm-white);
-  color: var(--dark);
-}
 
-.navbar--solid .navCta {
-  background-color: var(--brown);
-  color: var(--warm-white);
-  border: 1.5px solid var(--brown);
-}
 
-.navbar--solid .navCta:hover {
-  background-color: var(--dark);
-  border-color: var(--dark);
-}
+
+
+
+
+
 
 /* Mobile Hamburger */
 .hamburger {
@@ -209,25 +187,22 @@
   z-index: 1001;
   cursor: pointer;
   padding: 4px;
+  pointer-events: auto;
 }
 
 .hamburgerLine {
+  background-color: var(--cream);
   width: 24px;
   height: 1.5px;
   transition: background-color 0.2s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
-.navbar--transparent .hamburgerLine {
-  background-color: var(--warm-white);
-}
 
-.navbar--solid .hamburgerLine {
-  background-color: var(--dark);
-}
+
+
 
 .hamburger--open .hamburgerLine:nth-child(1) {
   transform: rotate(45deg) translate(4px, 4px);
-  background-color: var(--dark) !important;
 }
 
 .hamburger--open .hamburgerLine:nth-child(2) {
@@ -236,7 +211,6 @@
 
 .hamburger--open .hamburgerLine:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-  background-color: var(--dark) !important;
 }
 
 /* Mobile Menu Overlay */
@@ -306,15 +280,12 @@
   opacity: 0.6;
 }
 
-.navbar--transparent .langToggle {
-  border-color: var(--warm-white);
-}
 
-.navbar--solid .langToggle {
-  border-color: var(--dark);
-}
+
+
 
 .langBtn {
+  color: var(--cream);
   background: none;
   border: none;
   cursor: pointer;
@@ -327,13 +298,9 @@
   padding: 0;
 }
 
-.navbar--transparent .langBtn {
-  color: var(--warm-white);
-}
 
-.navbar--solid .langBtn {
-  color: var(--dark);
-}
+
+
 
 .langBtn:hover {
   opacity: 0.8;
@@ -345,17 +312,14 @@
 }
 
 .langSep {
+  color: var(--cream);
   font-size: 0.6rem;
   opacity: 0.3;
 }
 
-.navbar--transparent .langSep {
-  color: var(--warm-white);
-}
 
-.navbar--solid .langSep {
-  color: var(--dark);
-}
+
+
 
 .mobileLangToggle {
   display: flex;

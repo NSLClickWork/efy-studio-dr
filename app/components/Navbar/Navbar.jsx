@@ -56,11 +56,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={navClass} id="main-nav">
+      {/* Non-blending Layer: Logo Image only */}
+      <div className={styles.navbarLogoLayer}>
         <div className={styles.navbarInner}>
           <Link 
             href="/" 
-            className={styles.logo} 
+            className={styles.logoIconLink} 
             onClick={(e) => {
               if (window.location.pathname === '/') {
                 e.preventDefault();
@@ -77,8 +78,29 @@ export default function Navbar() {
               className={styles.logoSvg}
               priority
             />
-            <span className={styles.logoText}>EFY Studio</span>
           </Link>
+        </div>
+      </div>
+
+      {/* Blending Layer: Text, Links, and Buttons */}
+      <nav className={navClass} id="main-nav">
+        <div className={styles.navbarInner}>
+          <div className={styles.logoTextWrapper}>
+            <div className={styles.logoIconPlaceholder} />
+            <Link 
+              href="/" 
+              className={styles.logoTextLink}
+              onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                setMenuOpen(false);
+              }}
+            >
+              <span className={styles.logoText}>EFY Studio</span>
+            </Link>
+          </div>
 
           <div className={styles.navLinks}>
             {navigation.map((item) => (
