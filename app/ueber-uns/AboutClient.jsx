@@ -13,15 +13,6 @@ export default function AboutClient() {
   return (
     <>
       <section className={styles.hero} data-navbar-theme="dark">
-        <div className={styles.heroBg}>
-          <Image
-            src="/images/philosophy.png"
-            alt="EFY Studio Pilates"
-            fill
-            sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
-          />
-        </div>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.kicker}</span>

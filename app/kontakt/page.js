@@ -29,10 +29,11 @@ export default function KontaktPage() {
   return (
     <>
       <section className={styles.hero} data-navbar-theme="dark">
+        <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <span className="kicker">{tr.kicker}</span>
+          <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.kicker}</span>
           <h1>{tr.title}</h1>
-          <p>{tr.sub}</p>
+          <p style={{ color: 'rgba(253, 251, 247, 0.6)' }}>{tr.sub}</p>
         </div>
       </section>
 

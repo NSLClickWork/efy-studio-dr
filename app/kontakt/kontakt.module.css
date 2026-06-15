@@ -1,11 +1,26 @@
 .hero {
+  position: relative;
+  height: 50vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--dark);
-  color: var(--warm-white);
-  padding: 160px var(--space-md) var(--space-xl);
   text-align: center;
 }
 
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(42, 35, 24, 0.9) 0%, rgba(42, 35, 24, 0.7) 100%);
+  z-index: 1;
+}
+
 .heroContent {
+  position: relative;
+  z-index: 2;
+  color: var(--warm-white);
+  padding: var(--space-md);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -17,7 +32,6 @@
 }
 
 .heroContent p {
-  color: rgba(253, 251, 247, 0.7);
   font-size: 1.1rem;
 }
 
@@ -127,10 +141,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: calc(var(--nav-height) + var(--space-lg)) var(--space-md) var(--space-lg);
-  }
-
   .contactInner {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
