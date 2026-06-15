@@ -12,7 +12,7 @@ export default function StundenplanClient() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} data-navbar-theme="dark">
         <div className={styles.heroContent}>
           <span className="kicker">{tr.kicker}</span>
           <h1>{tr.title}</h1>
@@ -20,7 +20,7 @@ export default function StundenplanClient() {
         </div>
       </section>
 
-      <section className={styles.schedule}>
+      <section className={styles.schedule} data-navbar-theme="light">
         <div className={styles.scheduleInner}>
           <ScrollReveal>
             <div className={styles.widgetFallback}>

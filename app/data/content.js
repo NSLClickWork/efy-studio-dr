@@ -180,6 +180,7 @@ export const classes = [
 ];
 
 export const navigation = [
+  { key: 'home', href: '/' },
   { key: 'kurse', href: '/kurse' },
   { key: 'stundenplan', href: '/stundenplan' },
   { key: 'ueberUns', href: '/ueber-uns' },

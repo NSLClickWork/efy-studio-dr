@@ -1,6 +1,7 @@
 export const t = {
   de: {
     nav: {
+      home: 'Startseite',
       kurse: 'Kurse',
       stundenplan: 'Stundenplan',
       ueberUns: 'Über uns',
@@ -196,6 +197,7 @@ export const t = {
 
   en: {
     nav: {
+      home: 'Home',
       kurse: 'Classes',
       stundenplan: 'Schedule',
       ueberUns: 'About us',

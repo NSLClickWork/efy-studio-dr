@@ -28,7 +28,7 @@ export default function KontaktPage() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} data-navbar-theme="dark">
         <div className={styles.heroContent}>
           <span className="kicker">{tr.kicker}</span>
           <h1>{tr.title}</h1>
@@ -36,7 +36,7 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      <section className={styles.contact}>
+      <section className={styles.contact} data-navbar-theme="light">
         <div className={styles.contactInner}>
           <ScrollReveal>
             <div className={styles.infoCol}>

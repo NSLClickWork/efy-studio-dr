@@ -20,7 +20,7 @@ export default function ClassDetailClient({ slug }) {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} data-navbar-theme="dark">
         {cls.video ? (
           <video
             src={cls.video}
@@ -48,7 +48,7 @@ export default function ClassDetailClient({ slug }) {
         </div>
       </section>
 
-      <section className={styles.detail}>
+      <section className={styles.detail} data-navbar-theme="light">
         <div className={styles.detailInner}>
           <ScrollReveal>
             <div className={styles.detailMain}>
@@ -94,7 +94,7 @@ export default function ClassDetailClient({ slug }) {
         </div>
       </section>
 
-      <section className={styles.related}>
+      <section className={styles.related} data-navbar-theme="light">
         <div className={styles.relatedInner}>
           <h3>{tr.weitereKurse}</h3>
           <div className={styles.relatedGrid}>

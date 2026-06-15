@@ -14,7 +14,7 @@ export default function KurseClient() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} data-navbar-theme="dark">
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.kicker}</span>
@@ -23,7 +23,7 @@ export default function KurseClient() {
         </div>
       </section>
 
-      <section className={styles.grid}>
+      <section className={styles.grid} data-navbar-theme="light">
         <div className={styles.gridInner}>
           {classes.map((cls, i) => (
             <ScrollReveal key={cls.slug} delay={i * 0.1}>
@@ -54,7 +54,7 @@ export default function KurseClient() {
         </div>
       </section>
 
-      <section className="section section--sand" style={{ textAlign: 'center', padding: 'var(--space-xl) var(--space-md)' }}>
+      <section className="section section--sand" data-navbar-theme="light">
         <ScrollReveal>
           <h2 style={{ fontStyle: 'italic', marginBottom: 'var(--space-xs)' }}>{tr.cta.title}</h2>
           <p style={{ margin: '0 auto var(--space-md)', maxWidth: '400px' }}>{tr.cta.p}</p>

@@ -12,7 +12,7 @@ export default function AboutClient() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} data-navbar-theme="dark">
         <div className={styles.heroBg}>
           <Image
             src="/images/philosophy.png"
@@ -29,7 +29,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      <section className={styles.story}>
+      <section className={styles.story} data-navbar-theme="light">
         <div className={styles.storyInner}>
           <ScrollReveal>
             <div className={styles.storyHeader}>
@@ -48,7 +48,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      <section className={styles.team}>
+      <section className={styles.team} data-navbar-theme="light">
         <div className={styles.teamInner}>
           <ScrollReveal>
             <div className={styles.teamHeader}>

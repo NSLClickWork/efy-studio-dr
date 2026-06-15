@@ -13,7 +13,7 @@ export default function CafeClient() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} data-navbar-theme="dark">
         <div className={styles.heroBg}>
           <Image
             src="/images/cafe-moodboard.jpg"
@@ -31,7 +31,7 @@ export default function CafeClient() {
         </div>
       </section>
 
-      <section className={styles.intro}>
+      <section className={styles.intro} data-navbar-theme="light">
         <div className={styles.introInner}>
           <ScrollReveal>
             <h2 className={styles.introTitle}>{tr.introTitle}</h2>
@@ -40,7 +40,7 @@ export default function CafeClient() {
         </div>
       </section>
 
-      <section className={styles.menuSection}>
+      <section className={styles.menuSection} data-navbar-theme="light">
         <div className={styles.menuInner}>
           <ScrollReveal>
             <div className={styles.menuHeader}>
