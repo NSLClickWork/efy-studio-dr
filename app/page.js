@@ -56,7 +56,7 @@ export default function HomePage() {
 
   const galleryImages = [
     { type: 'video', src: '/videos/h264-3.mp4' },
-    { src: '/images/ball.png', alt: 'Pilates Ball Workout', pos: '80% center' },
+    { src: '/images/ball.png', alt: 'Pilates Reformer close-up' },
     { src: '/images/prenatal.png', alt: 'Pre & Postnatal Pilates' },
     { src: '/images/barre.png', alt: 'Barre Training' },
     { src: '/images/mat.png', alt: 'Pilates Mat Übung' },
