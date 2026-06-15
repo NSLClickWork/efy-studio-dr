@@ -37,6 +37,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'EFY Studio — Boutique Pilates Berlin',
     description: 'Premium Pilates Studio in Lichterfelde West. Reformer, Barre, Mat.',
+    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,
