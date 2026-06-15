@@ -56,10 +56,10 @@ export default function HomePage() {
 
   const galleryImages = [
     { type: 'video', src: '/videos/h264-3.mp4' },
-    { src: '/images/ball.png', alt: 'Pilates Reformer close-up' },
-    { src: '/images/prenatal.png', alt: 'Pre & Postnatal Pilates' },
-    { src: '/images/barre.png', alt: 'Barre Training' },
-    { src: '/images/mat.png', alt: 'Pilates Mat Übung' },
+    { src: '/images/ball.webp', alt: 'Pilates Reformer close-up' },
+    { src: '/images/prenatal.webp', alt: 'Pre & Postnatal Pilates' },
+    { src: '/images/barre.webp', alt: 'Barre Training' },
+    { src: '/images/mat.webp', alt: 'Pilates Mat Übung' },
   ];
 
   return (
@@ -68,7 +68,7 @@ export default function HomePage() {
       <section className={styles.hero} id="hero" data-navbar-theme="dark">
         <div className={styles.heroBg}>
           <Image
-            src="/images/reformer.png"
+            src="/images/reformer.webp"
             alt="Reformer Pilates im EFY Studio Berlin"
             fill
             priority
@@ -279,7 +279,7 @@ export default function HomePage() {
         </ScrollReveal>
         <ScrollReveal direction="right" className={styles.prenatalImage}>
           <Image
-            src="/images/prenatal.png"
+            src="/images/prenatal.webp"
             alt="Schwangere Frau beim Pilates Training auf dem Reformer"
             fill
             quality={100}

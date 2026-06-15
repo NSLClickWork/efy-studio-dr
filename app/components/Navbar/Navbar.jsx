@@ -56,7 +56,17 @@ export default function Navbar() {
     <>
       <nav className={navClass} id="main-nav">
         <div className={styles.navbarInner}>
-          <Link href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
+          <Link 
+            href="/" 
+            className={styles.logo} 
+            onClick={(e) => {
+              if (window.location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+              setMenuOpen(false);
+            }}
+          >
             <Image
               src="/images/logo.svg"
               alt="EFY Studio Logo"
