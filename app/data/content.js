@@ -37,7 +37,7 @@ export const classes = [
   },
   {
     slug: 'barre',
-    image: '/images/barre.png',
+    image: '/images/ball.png',
     video: '/videos/h264-2.mp4',
     duration: '50 Min.',
     de: {
