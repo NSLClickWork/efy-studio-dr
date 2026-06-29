@@ -67,14 +67,14 @@ export default function HomePage() {
       {/* ═══════════ SECTION 1: HERO ═══════════ */}
       <section className={styles.hero} id="hero" data-navbar-theme="dark">
         <div className={styles.heroBg}>
-          <Image
-            src="/images/reformer.webp"
-            alt="Reformer Pilates im EFY Studio Berlin"
-            fill
-            priority
-            quality={90}
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
+          <video
+            src="/videos/h264-1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.heroVideo}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
         <div className={styles.heroOverlay} />
@@ -147,7 +147,7 @@ export default function HomePage() {
                 alt="Zwei Frauen beim Mat Pilates im EFY Studio"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', filter: 'brightness(1.05) contrast(1.01)' }}
               />
             </div>
           </ScrollReveal>
@@ -192,7 +192,7 @@ export default function HomePage() {
       <section className={styles.editorial} id="editorial-reformer" data-navbar-theme="dark">
         <ScrollReveal direction="left" className={styles.editorialImage}>
           <video
-            src="/videos/h264-2-web.mp4"
+            src="/videos/h264-1.mp4"
             autoPlay
             loop
             muted
@@ -222,7 +222,7 @@ export default function HomePage() {
       <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="light">
         <ScrollReveal direction="right" threshold={0.2} className={styles.editorialImage}>
           <video
-            src="/videos/h264-1.mp4"
+            src="/videos/h264-3.mp4"
             autoPlay
             loop
             muted
@@ -237,6 +237,30 @@ export default function HomePage() {
             <p>{tr.editorialBarre.p1}</p>
             <Link href="/kurse/barre" className="btn btn--outline-dark" id="barre-link-btn">
               {tr.editorialBarre.btn}
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══════════ SECTION 6.5: MAT PILATES ═══════════ */}
+      <section className={styles.editorial} id="editorial-mat" data-navbar-theme="dark">
+        <ScrollReveal direction="left" className={styles.editorialImage}>
+          <video
+            src="/videos/h264-2-web.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </ScrollReveal>
+        <div className={`${styles.editorialContent} ${styles['editorialContent--dark']}`}>
+          <ScrollReveal direction="right">
+            <span className="kicker">{tr.editorialMat?.kicker}</span>
+            <h2>{tr.editorialMat?.title}</h2>
+            <p>{tr.editorialMat?.p1}</p>
+            <Link href="/kurse/mat" className="btn btn--outline" id="mat-link-btn">
+              {tr.editorialMat?.btn}
             </Link>
           </ScrollReveal>
         </div>
@@ -309,13 +333,11 @@ export default function HomePage() {
       <section className={styles.coffee} id="studio-cafe" data-navbar-theme="light">
         <ScrollReveal direction="left" className={styles.coffeeImage}>
           <Image
-            src="/images/cafe-moodboard.jpg"
+            src="/images/cafe-daytime.png"
             alt="EFY Studio Café — Mediterranean Outdoor Space"
-            width={800}
-            height={1000}
-            quality={100}
-            sizes="50vw"
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            fill
+            unoptimized
+            style={{ objectFit: 'cover', objectPosition: 'left center', display: 'block' }}
           />
         </ScrollReveal>
         <div className={styles.coffeeContent}>

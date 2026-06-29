@@ -57,7 +57,7 @@ export default function Navbar() {
   return (
     <>
       {/* Non-blending Layer: Logo Image only */}
-      <div className={styles.navbarLogoLayer}>
+      <div className={`${styles.navbarLogoLayer} ${navTheme === 'light' || menuOpen ? styles['logoLayer--light'] : ''}`}>
         <div className={styles.navbarInner}>
           <Link 
             href="/" 
@@ -73,8 +73,8 @@ export default function Navbar() {
             <Image
               src="/images/logo.svg"
               alt="EFY Studio Logo"
-              width={44}
-              height={44}
+              width={64}
+              height={64}
               className={styles.logoSvg}
               priority
             />
@@ -98,7 +98,7 @@ export default function Navbar() {
                 setMenuOpen(false);
               }}
             >
-              <span className={styles.logoText}>EFY Studio</span>
+              <span className={styles.logoText}>EFY STUDIOS</span>
             </Link>
           </div>
 

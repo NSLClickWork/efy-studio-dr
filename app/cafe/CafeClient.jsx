@@ -16,12 +16,12 @@ export default function CafeClient() {
       <section className={styles.hero} data-navbar-theme="dark">
         <div className={styles.heroBg}>
           <Image
-            src="/images/cafe-moodboard.jpg"
-            alt="EFY Studio Café"
+            src="/images/cafe-hero.png"
+            alt="Studio Cafe Space"
             fill
             priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
+            unoptimized
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
           />
         </div>
         <div className={styles.heroOverlay} />

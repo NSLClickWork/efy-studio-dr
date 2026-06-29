@@ -29,6 +29,7 @@
   height: 40px;
   width: auto;
   border-radius: 8px;
+  filter: invert(92%) sepia(10%) saturate(301%) hue-rotate(345deg) brightness(96%) contrast(92%);
 }
 
 .footerLogoText {

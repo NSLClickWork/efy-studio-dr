@@ -59,6 +59,12 @@ export const t = {
         p1: 'Eine elegante Verbindung aus Pilates, Ballett und funktionellem Training. Barre formt, strafft und stärkt — mit Freude an der Bewegung.',
         btn: 'Barre entdecken',
       },
+      editorialMat: {
+        kicker: 'Zurück zum Ursprung',
+        title: 'Mat Pilates',
+        p1: 'Klassisches Pilates auf der Matte — Kernstabilität und Achtsamkeit. Hier stärkst du deine Kernmuskulatur und verbesserst deine Beweglichkeit.',
+        btn: 'Mat Pilates entdecken',
+      },
       classTypes: {
         kicker: 'Für jedes Level',
         title: 'Finde deinen Kurs',
@@ -68,6 +74,7 @@ export const t = {
           { icon: '●', title: 'Move & Grow', desc: 'Bewegung, Spaß und Entwicklung für Kinder.' },
           { icon: '◑', title: 'Intermediate', desc: 'Für alle mit Pilates-Erfahrung.' },
           { icon: '◉', title: 'Private', desc: 'Individuelles 1:1 Training nach deinen Zielen.' },
+          { icon: '◒', title: 'Duo', desc: 'Zu zweit trainieren und motivieren.' },
         ],
       },
       prenatal: {
@@ -255,6 +262,12 @@ export const t = {
         p1: 'An elegant combination of Pilates, ballet and functional training. Barre shapes, tones and strengthens — with joy of movement.',
         btn: 'Discover Barre',
       },
+      editorialMat: {
+        kicker: 'Back to Basics',
+        title: 'Mat Pilates',
+        p1: 'Classic mat Pilates — core stability and mindfulness. Here you strengthen your core, improve your mobility and body awareness.',
+        btn: 'Discover Mat Pilates',
+      },
       classTypes: {
         kicker: 'For every level',
         title: 'Find your class',
@@ -264,6 +277,7 @@ export const t = {
           { icon: '●', title: 'Move & Grow', desc: 'Movement, fun and development for children.' },
           { icon: '◑', title: 'Intermediate', desc: 'For those with Pilates experience.' },
           { icon: '◉', title: 'Private', desc: 'Individual 1:1 training tailored to your goals.' },
+          { icon: '◒', title: 'Duo', desc: 'Train together and motivate each other.' },
         ],
       },
       prenatal: {

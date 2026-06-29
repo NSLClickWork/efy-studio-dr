@@ -1,7 +1,7 @@
 export const classes = [
   {
     slug: 'reformer',
-    image: '/images/reformer.webp',
+    image: '/images/barre.webp',
     video: '/videos/h264-1.mp4',
     duration: '55 Min.',
     de: {
@@ -37,7 +37,7 @@ export const classes = [
   },
   {
     slug: 'barre',
-    image: '/images/philosophy.png',
+    image: '/images/reformer.webp',
     video: '/videos/h264-2.mp4',
     duration: '50 Min.',
     de: {
