@@ -1022,6 +1022,8 @@
     aspect-ratio: auto;
     height: 420px;
     min-height: unset;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent), linear-gradient(to bottom, transparent 2%, black 6%, black 94%, transparent 98%);
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent), linear-gradient(to bottom, transparent 2%, black 6%, black 94%, transparent 98%);
   }
 }
 

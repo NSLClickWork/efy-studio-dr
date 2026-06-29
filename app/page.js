@@ -337,7 +337,7 @@ export default function HomePage() {
             alt="EFY Studio Café — Mediterranean Outdoor Space"
             fill
             unoptimized
-            style={{ objectFit: 'cover', objectPosition: 'left center', display: 'block' }}
+            style={{ objectFit: 'cover', objectPosition: 'top', display: 'block' }}
           />
         </ScrollReveal>
         <div className={styles.coffeeContent}>

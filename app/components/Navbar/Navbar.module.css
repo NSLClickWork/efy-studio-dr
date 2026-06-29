@@ -362,3 +362,16 @@
     display: flex;
   }
 }
+
+@media (max-width: 768px) {
+  .logoSvg {
+    height: 46px;
+  }
+  .logoIconPlaceholder {
+    width: 58px; /* 46px logo + 12px gap */
+  }
+  .navbar, .navbarLogoLayer {
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: 8px;
+  }
+}
