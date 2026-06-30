@@ -1,7 +1,7 @@
 export const classes = [
   {
     slug: 'reformer',
-    image: '/images/barre.webp',
+    image: '/images/ball.webp',
     video: '/videos/h264-1.mp4',
     duration: '55 Min.',
     de: {

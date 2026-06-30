@@ -55,7 +55,7 @@ export default function HomePage() {
   const marqueeItems = [...stripItems, ...stripItems, ...stripItems];
 
   const galleryImages = [
-    { type: 'video', src: '/videos/h264-3.mp4' },
+    { type: 'video', src: '/videos/h264-3-web.mp4' },
     { src: '/images/ball.webp', alt: 'Pilates Reformer close-up' },
     { src: '/images/prenatal.webp', alt: 'Pre & Postnatal Pilates' },
     { src: '/images/barre.webp', alt: 'Barre Training' },
@@ -129,19 +129,18 @@ export default function HomePage() {
 
       <div style={{ backgroundColor: 'var(--warm-white)', position: 'relative', zIndex: 1, overflowX: 'hidden' }}>
         {/* ═══════════ SECTION 3: PHILOSOPHY ═══════════ */}
-      <section className={styles.philosophy} id="philosophy" data-navbar-theme="light">
+      <section className={styles.philosophy} id="ueber-uns" data-navbar-theme="cream">
         <div className={styles.philosophyInner}>
-          <ScrollReveal direction="left">
-            <div className={styles.philosophyContent}>
+          <div className={styles.philosophyContent}>
+            <ScrollReveal direction="left">
               <span className="kicker">{tr.philosophy.kicker}</span>
               <h2>{tr.philosophy.title}</h2>
               <p>{tr.philosophy.p1}</p>
               <p>{tr.philosophy.p2}</p>
               <Link href="/ueber-uns" className="link-arrow">{tr.philosophy.link}</Link>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal direction="right" delay={0.2}>
-            <div className={styles.philosophyImage}>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal direction="right" delay={0.2} className={styles.philosophyImage}>
               <Image
                 src="/images/philosophy.png"
                 alt="Zwei Frauen beim Mat Pilates im EFY Studio"
@@ -149,7 +148,6 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: 'cover', filter: 'brightness(1.05) contrast(1.01)' }}
               />
-            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -219,10 +217,10 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 6: BARRE ═══════════ */}
-      <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="light">
+      <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="cream">
         <ScrollReveal direction="right" threshold={0.2} className={styles.editorialImage}>
           <video
-            src="/videos/h264-3.mp4"
+            src="/videos/h264-2.mp4"
             autoPlay
             loop
             muted
@@ -243,10 +241,10 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 6.5: MAT PILATES ═══════════ */}
-      <section className={styles.editorial} id="editorial-mat" data-navbar-theme="dark">
+      <section className={styles.editorial} id="editorial-mat" data-navbar-theme="sand">
         <ScrollReveal direction="left" className={styles.editorialImage}>
           <video
-            src="/videos/h264-2-web.mp4"
+            src="/videos/h264-3-web.mp4"
             autoPlay
             loop
             muted
@@ -254,7 +252,7 @@ export default function HomePage() {
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </ScrollReveal>
-        <div className={`${styles.editorialContent} ${styles['editorialContent--dark']}`}>
+        <div className={`${styles.editorialContent} ${styles['editorialContent--sand']}`}>
           <ScrollReveal direction="right">
             <span className="kicker">{tr.editorialMat?.kicker}</span>
             <h2>{tr.editorialMat?.title}</h2>
@@ -266,41 +264,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════ SECTION 7: CLASS TYPES ═══════════ */}
-      <section className={styles.classTypes} id="class-types" data-navbar-theme="light">
-        <div className={styles.classTypesInner}>
-          <ScrollReveal>
-            <div className={styles.classTypesHeader}>
-              <span className="kicker">{tr.classTypes.kicker}</span>
-              <h2>{tr.classTypes.title}</h2>
-            </div>
-          </ScrollReveal>
-          <div className={styles.classTypesGrid}>
-            {tr.classTypes.items.map((ct, i) => (
-              <ScrollReveal key={ct.title} delay={i * 0.1}>
-                <div className={styles.classTypeCard}>
-                  <div className={styles.classTypeIcon}>{ct.icon}</div>
-                  <h4>{ct.title}</h4>
-                  <p>{ct.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ═══════════ SECTION 8: PRENATAL ═══════════ */}
       <section className={styles.prenatal} id="prenatal" data-navbar-theme="light">
-        <ScrollReveal direction="left">
-          <div className={styles.prenatalContent}>
+        <div className={styles.prenatalContent}>
+          <ScrollReveal direction="left">
             <span className="kicker">{tr.prenatal.kicker}</span>
             <h2>{tr.prenatal.title}</h2>
             <p>{tr.prenatal.p}</p>
             <Link href="/kurse/prenatal" className="btn btn--outline-dark" id="prenatal-link-btn">
               {tr.prenatal.btn}
             </Link>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
         <ScrollReveal direction="right" className={styles.prenatalImage}>
           <Image
             src="/images/prenatal.webp"
@@ -314,10 +291,10 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 9: MOVE & GROW ═══════════ */}
-      <section className={styles.moveGrow} id="move-grow" data-navbar-theme="dark">
+      <section className={`${styles.moveGrow} ${styles['moveGrow--reverse']}`} id="move-grow" data-navbar-theme="dark">
         <div className={styles.moveGrowWatermark}>M&G</div>
         <div className={styles.moveGrowContent}>
-          <ScrollReveal>
+          <ScrollReveal direction="right">
             <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.moveGrow.kicker}</span>
             <h2>{tr.moveGrow.title}</h2>
             <p className={styles.moveGrowSub}>{tr.moveGrow.sub}</p>
@@ -327,11 +304,21 @@ export default function HomePage() {
             </Link>
           </ScrollReveal>
         </div>
+        <ScrollReveal direction="left" className={styles.moveGrowImage}>
+          <Image
+            src="/images/hero-v2.png"
+            alt="Move & Grow Pilates for Kids"
+            fill
+            quality={90}
+            sizes="50vw"
+            style={{ objectFit: 'cover', objectPosition: 'center top' }}
+          />
+        </ScrollReveal>
       </section>
 
       {/* ═══════════ SECTION 10: COFFEE ═══════════ */}
-      <section className={styles.coffee} id="studio-cafe" data-navbar-theme="light">
-        <ScrollReveal direction="left" className={styles.coffeeImage}>
+      <section className={`${styles.coffee} ${styles['coffee--reverse']}`} id="studio-cafe" data-navbar-theme="light">
+        <ScrollReveal direction="right" className={styles.coffeeImage}>
           <Image
             src="/images/cafe-daytime.png"
             alt="EFY Studio Café — Mediterranean Outdoor Space"
@@ -341,7 +328,7 @@ export default function HomePage() {
           />
         </ScrollReveal>
         <div className={styles.coffeeContent}>
-          <ScrollReveal direction="right">
+          <ScrollReveal direction="left">
             <span className="kicker">{tr.coffee.kicker}</span>
             <h2>{tr.coffee.title}</h2>
             <p>{tr.coffee.p}</p>
@@ -427,28 +414,25 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 13: LOCATION ═══════════ */}
-      <section className={styles.location} id="location" data-navbar-theme="light">
+      <section className={styles.location} id="kontakt" data-navbar-theme="dark">
         <div className={styles.locationInner}>
-          <ScrollReveal direction="left">
-            <div className={styles.locationContent}>
-              <span className="kicker">{tr.location.kicker}</span>
+          <div className={styles.locationContent}>
+            <ScrollReveal direction="left">
+              <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.location.kicker}</span>
               <h2>{tr.location.title}</h2>
-              <div className={styles.locationAddress}>
-                <p>
-                  <strong>{studioInfo.address.street}</strong><br />
-                  {studioInfo.address.zip} {studioInfo.address.city}<br />
-                  {studioInfo.address.area}
-                </p>
+              <p>{tr.location.p}</p>
+              <address>
+                <strong>EFY Studio</strong><br />
+                {studioInfo.address.street}<br />
+                {studioInfo.address.city}
+              </address>
+              <div className={styles.locationCtas}>
+                <a href={studioInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{tr.location.route}</a>
+                <a href={`mailto:${studioInfo.email}`} className="btn btn--outline">{tr.location.email}</a>
               </div>
-              <div className={styles.locationHours}>
-                <p>{studioInfo.openingHours.weekdays}</p>
-                <p>{studioInfo.openingHours.saturday}</p>
-                <p>{studioInfo.openingHours.sunday}</p>
-              </div>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal direction="right" delay={0.2}>
-            <div className={styles.locationMap}>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal direction="right" delay={0.2} className={styles.locationMap}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.8!2d13.307!3d52.433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCurtiusstra%C3%9Fe+9%2C+12205+Berlin!5e0!3m2!1sde!2sde!4v1"
                 allowFullScreen
@@ -456,7 +440,6 @@ export default function HomePage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="EFY Studio Standort"
               />
-            </div>
           </ScrollReveal>
           </div>
         </section>

@@ -381,6 +381,7 @@ p {
 .reveal-visible {
   opacity: 1;
   transform: none !important;
+  will-change: auto;
   transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
               transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
 }
